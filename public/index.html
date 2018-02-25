@@ -1,0 +1,50 @@
+<html>
+   <head>
+      <title>File Uploading Form</title>
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+   </head>
+
+   <body>
+      <div class="main-container">
+         <h1>create your website</h1>
+         
+         <form action = "/submit" method = "POST" 
+            enctype = "multipart/form-data">
+
+            <label for="Name">name</label>
+            <input type="text" id="Name" name="Name" required />
+
+            <label for="Email">email id</label>
+            <input type="email" id="Email" name="Email" required />
+
+            <label for="profilePic">choose profile picture</label>
+            <input type="file" id="profilePic" name="profile-pic" size="50" required />
+
+            <label for="coverPhoto">choose cover photo</label>
+            <input type="file" id="coverPhoto" name="cover-photo" required />
+            
+            <label for="backgroundColor">choose background color</label>
+            <input type="color"  id="backgroundColor" name="backgroundcolor" required />
+
+            <label for="about">tell something about yourself</label>
+            <textarea id="about" name="About" rows="8" cols="56" required></textarea>
+            
+            <input type = "submit" value = "submit" />
+
+         </form>
+         <h3>get created website</h3>
+         <form action = "https://frozen-tundra-46411.herokuapp.com/getId" method = "POST" 
+            enctype = "multipart/form-data">
+
+            <label>type id no</label>
+            <input type="text" name="id" />
+
+            <input type="submit" value="get" />
+            
+         </form>
+
+         <h3>Get information</h3>
+         <a href="idbased.html">get all users</a>
+      </div> 
+   </body>
+</html>
